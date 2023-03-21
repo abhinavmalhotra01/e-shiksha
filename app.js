@@ -8,6 +8,7 @@ config({
     path:"./config/config.env"
 });
 
+
 const app = express()
 
 // using middlewares
@@ -33,8 +34,8 @@ app.use("/api/v1",user)
 app.use("/api/v1",payment)
 app.use("/api/v1",dashboar)
 
-const path = __dirname+'/views';
+
 export default app;
 
-app.get("/",(req,res)=>res.sendFile(path+"/index.html"))
+app.get("/",(req,res)=>res.send("<h1>server working</h1>"))
 app.use(ErrorMiddleware)
