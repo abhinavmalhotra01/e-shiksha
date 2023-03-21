@@ -39,10 +39,7 @@ export const createCourse = catchAsyncError( async (req,res,next)=>{
 
     // const mycloud = await cloudinary.v2.uploader.upload(fileUri.content);
     await Course.create({
-        title,description,category,createdBy,poster:{
-            public_id : mycloud.public_id,
-            url : mycloud.secure_url,
-        },
+        title,description,category,createdBy,
     })
     res.status(201).json({
         success : true,
@@ -128,7 +125,7 @@ Course.watch().on("change",async()=>{
 
     const courses = await Course.find({});
     let totalViews =0;
-    for(let i=0;i<course.length;i++){
+    for(let i=0;i<courses.length;i++){
         totalViews+=courses[i].views;
     }
     stats[0].views=totalViews;
