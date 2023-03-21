@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.540df086.css",
+    "main.js": "/static/js/main.7fae3519.js",
+    "static/media/Black General Subjects Online Education YouTube Video Ad.mp4": "/static/media/Black General Subjects Online Education YouTube Video Ad.244d07ee65871ef65275.mp4",
+    "static/media/education-logo-design.jpg": "/static/media/education-logo-design.ec22a482ecf1b45e2572.jpg",
+    "index.html": "/index.html",
+    "main.540df086.css.map": "/static/css/main.540df086.css.map",
+    "main.7fae3519.js.map": "/static/js/main.7fae3519.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.540df086.css",
+    "static/js/main.7fae3519.js"
+  ]
+}

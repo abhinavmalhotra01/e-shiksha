@@ -12,6 +12,7 @@ config({
 const app = express()
 
 // using middlewares
+app.use(express.static(__dirname+ "/views/"));
 app.use(express.json());
 app.use(express.urlencoded({
     extended:true,
@@ -36,6 +37,8 @@ app.use("/api/v1",dashboar)
 
 
 export default app;
-
-app.get("/",(req,res)=>res.send("<h1>server working</h1>"))
+app.get("/", function (req, res) {
+  res.sendfile(__dirname+ "/views/index.html");
+});
+// app.get("/",(req,res)=>res.send("<h1>server working</h1>"))
 app.use(ErrorMiddleware)
